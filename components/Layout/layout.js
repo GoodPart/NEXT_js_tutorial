@@ -6,9 +6,10 @@ import Link from 'next/link';
 const name = 'koreaCodingKing';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
-    <div>{home ? <>{children}</> : <>홈이 아니네요</>}</div>
+    // <div>{home ? <>{children}</> : <>홈이 아니네요</>}</div>
+    <div>{children}</div>
     // <div className={layoutModuleStyle.container}>
     //   <Head>
     //     <link rel="icon" href="/favicon.ico" />

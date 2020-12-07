@@ -9,9 +9,18 @@
   },
   "dependencies": {
     "@zeit/next-less": "^1.0.1",
+    "gray-matter": "^4.0.2",
     "less": "^3.12.2",
     "next": "10.0.3",
+    "postcss-preset-env": "^6.7.0",
     "react": "17.0.1",
     "react-dom": "17.0.1"
-  }
+  },
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ],
+  "devDependencies": {}
 }
