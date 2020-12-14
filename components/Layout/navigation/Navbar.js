@@ -1,0 +1,56 @@
+import React, {Component} from 'react';
+import Link from 'next/link';
+import { MenuItems } from './MenuItems';
+import './index.less'
+
+import { faTimes, faAd, faBars } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {Button} from './Button'
+
+class Navbar extends Component {
+
+    state = {
+         clicked: false
+         }
+         
+    handleClick = () => {
+        this.setState({
+            clicked: !this.state.clicked
+        })
+    }
+
+    render() {
+        return (
+            <nav className="NavbarItems">
+                {/* <FontAwesomeIcon className="icons" icon={faTimes} /> */}
+                <h1 className="navbar-logo">React<FontAwesomeIcon className="icons logo" icon={faAd} /></h1>
+                <div className="menu-icon" onClick={this.handleClick}>
+                    <FontAwesomeIcon className="icons" icon={this.state.clicked ? faTimes :  faBars} />
+
+                </div>
+                <ul className={this.state.clicked ? 'nav-menu active' : "nav-menu"}>
+                    {
+                        MenuItems.map((item, index)=> {
+                            return (
+                                <li key={index}>
+                                    <Link href="[pagename]"  as={item.as}>
+                                    <a className={item.cName}>{item.title}</a>
+                                    </Link>
+
+                                    {/* reactVersion-- <a className={item.cName} href={item.url}>
+                                        {item.title}
+                                    </a> */}
+                                </li>
+                            )
+                        })
+                    }
+
+                    
+                </ul>
+                <Button>sign up</Button>
+            </nav>
+        )
+    }
+}
+
+export default Navbar

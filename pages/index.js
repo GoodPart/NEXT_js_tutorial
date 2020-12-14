@@ -5,9 +5,11 @@ import Layout, { siteTitle } from '../components/layout'
 
 import utilStyles from '../styles/utils.module.less'
 
+
+
+
 export default function Home() {
   return (
-    <>
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
@@ -20,6 +22,5 @@ export default function Home() {
         </p>
       </section>
     </Layout>
-    </>
   )
 }
