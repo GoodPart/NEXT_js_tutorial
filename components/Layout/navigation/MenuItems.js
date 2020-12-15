@@ -1,7 +1,7 @@
 export const MenuItems = [
     {
         title : 'Home',
-        as : '/home',
+        as : '/home',//이부분 수정이 필요함
         cName: 'nav-links',
     },
     {

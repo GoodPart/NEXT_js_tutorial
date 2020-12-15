@@ -25,7 +25,11 @@ class Navbar extends Component {
         return (
             <nav className="NavbarItems">
                 {/* <FontAwesomeIcon className="icons" icon={faTimes} /> */}
-                <h1 className="navbar-logo">React<FontAwesomeIcon className="icons logo" icon={faAd} /></h1>
+                <Link href="/">
+                    <a className="navbar-logo">
+                        <h1 className="">React<FontAwesomeIcon className="icons logo" icon={faAd} /></h1>
+                    </a>
+                </Link>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <FontAwesomeIcon className="icons" icon={this.state.clicked ? faTimes :  faBars} />
 

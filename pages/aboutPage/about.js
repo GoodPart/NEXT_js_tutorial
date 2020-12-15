@@ -1,9 +1,13 @@
+import Head from 'next/head';
+import Layout from '../../components/Layout/Layouts/default' ;
 import './index.less';
 
-export default function About() {
+export default function About({ title }) {
     return (
-        <div className="contents">
-            about
-        </div>
+        <Layout
+        title={title}
+         >
+            about입니다
+        </Layout>
     )
 }

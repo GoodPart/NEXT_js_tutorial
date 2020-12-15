@@ -1,9 +1,13 @@
+import Head from 'next/head';
+import Layout from '../../components/Layout/Layouts/default' ;
 import './index.less';
 
-export default function signUp() {
+export default function signUp({ title }) {
     return (
-        <div className="contents">
-            SignUp 싸인업
-        </div>
+        <Layout
+        title={title}
+         >
+            {title}입니다
+        </Layout>
     )
 }
