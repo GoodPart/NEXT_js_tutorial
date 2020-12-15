@@ -3,6 +3,7 @@ import {useRouter} from 'next/router';
 import Home from '../index'
 import About from '../aboutPage/about';
 import Data from '../dataPage/data';
+import SignUp from '../signUpPage/signUp';
 
 const Dynamic = () => {
     const router = useRouter();
@@ -12,7 +13,8 @@ const Dynamic = () => {
             {
                 pagename === "home" ? <Home /> :
                 pagename === "about" ? <About/> :
-                pagename === "data" ? <Data /> : null 
+                pagename === "data" ? <Data /> :
+                pagename === "signUp" ? <SignUp/> : null 
             }
         </div>
     );

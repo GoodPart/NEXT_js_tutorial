@@ -14,6 +14,12 @@ export const MenuItems = [
         as : '/data',
         cName: 'nav-links',
     },
+    {
+        title : 'SignUp',
+        href: "../signUpPage/signUp",
+        as : '/signUp',
+        cName: 'nav-links',
+    },
     // {
     //     title : 'Contact Us',
     //     url : '#',

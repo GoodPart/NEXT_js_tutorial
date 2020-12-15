@@ -20,6 +20,8 @@ class Navbar extends Component {
     }
 
     render() {
+        
+        const SignUpUrl = MenuItems[3].as;
         return (
             <nav className="NavbarItems">
                 {/* <FontAwesomeIcon className="icons" icon={faTimes} /> */}
@@ -47,7 +49,11 @@ class Navbar extends Component {
 
                     
                 </ul>
-                <Button>sign up</Button>
+                {/* <Button>
+                    <Link href="[pagename]" as={SignUpUrl}>
+                    <a>sign up</a>
+                    </Link>
+                </Button> */}
             </nav>
         )
     }
