@@ -40,7 +40,7 @@ class Navbar extends Component {
                             return (
                                 <li key={index}>
                                     <Link href="[pagename]"  as={item.as}>
-                                    <a className={item.cName}>{item.title}</a>
+                                    <a onClick={this.handleClick} className={item.cName}>{item.title}</a>
                                     </Link>
 
                                     {/* reactVersion-- <a className={item.cName} href={item.url}>
