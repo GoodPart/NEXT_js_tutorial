@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import layoutModuleStyle from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+import layoutModuleStyle from './layout.module.less'
+import utilStyles from '../styles/utils.module.less'
 import Link from 'next/link'
 
 const name = 'koreaCodingKing';
