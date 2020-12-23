@@ -12,6 +12,7 @@ import { createStore, compose, applyMiddleware } from "redux";
 import reducer from "../reducers";
 import { composeWithDevTools } from "redux-devtools-extension";
 import logger from "redux-logger";
+import ReduxThunk from "redux-thunk";
 
 // import { faCheckSquare, faSpinner } from "@fortawesome/free-solid-svg-icons";
 // import { faSquare } from "@fortawesome/free-regular-svg-icons";
@@ -34,7 +35,7 @@ function MyApp({ Component }) {
 }
 
 const configureStore = (initialState, options) => {
-  const middlewares = [logger]; // 미들웨어들을 넣으면 된다.
+  const middlewares = [ReduxThunk, logger]; // 미들웨어들을 넣으면 된다.
   const enhancer =
     process.env.NODE_ENV === "production"
       ? compose(applyMiddleware(...middlewares))
