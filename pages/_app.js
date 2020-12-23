@@ -8,18 +8,13 @@ import Footer from "../components/Layout/footer/footer";
 //add redux
 import withRedux from "next-redux-wrapper";
 import { createStore, compose, applyMiddleware } from "redux";
-// import { Provider } from "react-redux";
-import reducer from "../reducers";
+import rootReducer from "../redux/_reducers";
 import { composeWithDevTools } from "redux-devtools-extension";
 import logger from "redux-logger";
 import ReduxThunk from "redux-thunk";
 
-// import { faCheckSquare, faSpinner } from "@fortawesome/free-solid-svg-icons";
-// import { faSquare } from "@fortawesome/free-regular-svg-icons";
-
 function MyApp({ Component }) {
   return (
-    // <Provider store={store}>
     <div className="wrapper">
       <Head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
@@ -30,7 +25,6 @@ function MyApp({ Component }) {
       </div>
       <Footer />
     </div>
-    // </Provider>
   );
 }
 
@@ -40,7 +34,7 @@ const configureStore = (initialState, options) => {
     process.env.NODE_ENV === "production"
       ? compose(applyMiddleware(...middlewares))
       : composeWithDevTools(applyMiddleware(...middlewares));
-  const store = createStore(reducer, initialState, enhancer);
+  const store = createStore(rootReducer, initialState, enhancer);
   return store;
 };
 
